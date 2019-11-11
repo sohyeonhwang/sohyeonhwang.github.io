@@ -27,8 +27,8 @@ p {
     margin: 5px 0px 10px 0px;
 }
 
-.wavy {
-    text-decoration: underline wavy #D8D8D8;
+.section {
+    margin-bottom: 15px;
 }
 
 /* links */

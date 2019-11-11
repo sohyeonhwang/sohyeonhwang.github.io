@@ -13,6 +13,14 @@ h2 {
     font-size: 12pt;
 }
 
+p {
+    font-size: 10pt;
+}
+
+.wavy {
+    text-decoration: underline wavy #D8D8D8;
+}
+
 /* links */
 a {
     background-color: transparent;

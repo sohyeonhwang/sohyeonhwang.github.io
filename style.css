@@ -11,6 +11,7 @@ body {
 h2 {
     font-weight: bold;
     font-size: 12pt;
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 
 p {
@@ -53,6 +54,7 @@ img {
 
 /* navigation bar*/
 .w3-bar {
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: bold;
     font-size: 12pt;
     margin-top: 6px;

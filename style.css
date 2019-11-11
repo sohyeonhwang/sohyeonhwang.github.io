@@ -1,0 +1,78 @@
+/* global settings */
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 10pt;
+    max-width: 750px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    /*margin: 0 auto;*/
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+/* links */
+a {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+    transition: background .15s cubic-bezier(.33,.66,.66,1);
+    border-bottom: 3px solid #D8D8D8;
+    /*box-shadow: inset 0 -3px 0 #D8D8D8;*/
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+a:hover {
+    background-color: #D8D8D8;
+}
+
+/* local settings */
+img {
+    float:left;
+    padding: 0px 12px 3px 0px;
+    width: 20vw;
+}
+
+#user-pic {
+    width: 30vw;
+    min-width: 125px;
+    max-width: 200px;
+}
+
+/* navigation bar*/
+.w3-bar {
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 6px;
+    border-bottom: 2px solid #D8D8D8;
+}
+
+#dropper {
+    display: none;
+    background-color: transparent;
+}
+
+#projects > button {
+    font-weight: bold;
+    display:block;
+    padding: 0px 0px 2px 0px;
+    margin-bottom:6px;
+    border-bottom: 2px dotted gray;
+}
+
+/* responsive settings */
+/* for navigation bar*/
+@media screen and (max-width: 600px) {
+    .w3-bar > a:not(:first-child) {
+        display: none;
+    }
+    #dropper {
+        display: block;
+    }
+  }
+
+/* responsive class added */

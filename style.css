@@ -5,12 +5,16 @@ body {
     max-width: 800px;
     padding-top: 50px;
     margin-bottom: 50px;
-    /*margin: 0 auto;*/
+}
+
+h1 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: bold;
 }
 
 h2 {
     font-weight: bold;
-    font-size: 12pt;
+    font-size: 10pt;
     font-family: "Segoe UI",Arial,sans-serif;
 }
 
@@ -49,8 +53,12 @@ a:hover {
 }
 
 /* local settings */
+
+#content {
+    margin: 0 auto;
+}
+
 img {
-    float:left;
     padding: 0px 12px 3px 0px;
     width: 20vw;
 }
@@ -60,39 +68,3 @@ img {
     min-width: 125px;
     max-width: 200px;
 }
-
-/* navigation bar*/
-.w3-bar {
-    font-family: "Segoe UI",Arial,sans-serif;
-    font-weight: bold;
-    font-size: 12pt;
-    margin-top: 6px;
-    border-bottom: 2px solid #D8D8D8;
-}
-
-#dropper {
-    display: none;
-    background-color: transparent;
-}
-
-#projects > button {
-    font-family: "Segoe UI",Arial,sans-serif;
-    font-weight: bold;
-    font-size: 10pt;
-    display:block;
-    padding: 0px 0px 2px 0px;
-    margin-bottom:6px;
-}
-
-/* responsive settings */
-/* for navigation bar*/
-@media screen and (max-width: 600px) {
-    .w3-bar > a:not(:first-child) {
-        display: none;
-    }
-    #dropper {
-        display: block;
-    }
-  }
-
-/* responsive class added */

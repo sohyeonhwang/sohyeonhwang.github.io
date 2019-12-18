@@ -11,86 +11,129 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="style.css" type="text/css">
     
+    <link rel="shortcut icon" href="/imgs/sohw.jpg">
 
 </head>
+
 <body>
-    <!--the main body of the site goes here-->
-    <div class="w3-container" id="content">
-    <div id="header" class="section">
-    <h1><b>sohyeon hwang</b></h1>
-    <p>>>> sohyeonhwang [at] u.northwestern.edu</p>
-    </div>
-    <hr>
-    <div id="about" class="section">
-        <img src="/imgs/sohw.jpg" alt="a pic of me" id="user-pic" class="w3-circle"/>
-        <p>My name is Sohyeon Hwang, and I'm a first-year PhD student in the Media, Technology, and Society program at Northwestern University. I am advised by <a href="http://www.aaronshaw.org/" target="_blank">Dr. Aaron Shaw</a> and part of the <a href="https://communitydata.science/" target="_blank">Community Data Science Collective</a>. </p>
-        <p>My research interests center around governance (broadly speaking) and online participation. I currently focus on the complexity of governance in large-scale social computing systems, particularly platforms that follow decentralized modes of moderation and rule enforcement like Reddit and Wikipedia. </p>
-        <p>In my non-academic life, I volunteer as a tutor with the cool folks at <a href="https://www.girlforward.org/what-we-do" target="_blank">GirlForward</a> and like to hang around museums + take pictures on my point-and-shoot.</p>
-        <br/>
-        <p>You can see my full <b>CV</b> as a PDF <a href="/docs/sohw_cv_aug2019.pdf">here</a>.</p>
-    </div>
-    <hr>
-    <div id="contact" class="section">
-        <h2>contact</h2>
-        <p>I'm best reached by email. If I don't respond in about 3 days days, don't hesitate to send me a little follow-up :)</p>
-        <p><b>email: </b> sohyeonhwang [at] u.northwestern.edu</p>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-animate-left w3-collapse w3-top w3-center w3-border-right w3-display-container" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
 
-        <div>
-            <a href="https://github.com/sohyeonhwang" target="_blank">
-            <img src="/imgs/github_icon.png" style="width:28px;padding: 3px 12px 0px 0px;" alt="Github logo"/>
-            github
+    <div class="w3-padding-64 w3-center">
+        <h2 class="w3-large">sohyeon hwang</h2>
+        <h3>media, technology, society<br>northwestern university</h3>
+        <div id="icons" class="w3-padding-16">
+            <a href="https://github.com/sohyeonhwang" target="_blank" class="w3-border-0">
+                <img src="/imgs/github_icon.png" style="width:20px;" alt="Github logo"/>
+            </a>
+            <a itemprop="sameAs" content="https://orcid.org/0000-0001-8415-7395" href="https://orcid.org/0000-0001-8415-7395" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;" class="w3-border-0">
+                <img src="/imgs/orcid_icon.png" style="width:20px;" alt="ORCID iD icon"/>
+            </a>
+            <a href="https://www.linkedin.com/in/sohyeonhwang/" target="_blank" class="w3-border-0">
+                <img src="/imgs/linkedin_icon.png" style="width:20px;" alt="LinkedIn icon"/>
+            </a>
+            <a href="https://twitter.com/sohwng" class="w3-border-0">
+            <img src="/imgs/twitter_icon.png"  style="width:20px;" alt="Twitter icon"/>
             </a>
         </div>
-        <div itemscope itemtype="https://schema.org/Person">
-            <a itemprop="sameAs" content="https://orcid.org/0000-0001-8415-7395" href="https://orcid.org/0000-0001-8415-7395" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;">
-            <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:auto;padding: 3px 12px 0px 0px;" alt="ORCID iD icon"/>
-            orcid: 0000-0001-8415-7395
-            </a>
-        </div>
-        <div>
-            <a href="https://www.linkedin.com/in/sohyeonhwang/" target="_blank">
-            <img src="/imgs/linkedin_icon.png" style="width:28px;padding: 3px 12px 0px 0px;" alt="LinkedIn icon"/>
-            linkedin
-            </a>
-        </div>
-        <div>
-            <a href="https://twitter.com/sohwng">
-            <img src="/imgs/twitter_icon.png"  style="width:28px;padding: 3px 12px 0px 0px;" alt="Twitter icon"/>
-            twitter</a>
-        </div>
 
+        <img src="/imgs/sohw.jpg" alt="a pic of me" id="user-pic-bar" class="w3-hide-small w3-hide-medium w3-show w3-block w3-center"/>
+
+        <a href="#" onclick="w3_close()" class="">home</a> / 
+        <a href="/docs/sohw_cv_aug2019.pdf" onclick="w3_close()" class="">cv</a> / 
+        <a href="#contact" onclick="w3_close()" class="">contact</a>
 
     </div>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-display-bottommiddle w3-padding-64 w3-block w3-hide-large w3-border-0">>>> close <<<</a>
+</nav>
 
-    <!--
-    <div id="teaching" class="section">
-        <h2>teaching</h2>
-        <ul class="formatted">
-            <li><a href="https://www.cs.cornell.edu/~pjs54/Teaching/INFO4240/" target="_blank">
-                INFO4240: Designing Technologies for Social Impact</a>
-                <br>Undergraduate course, Cornell University
-                <br>Undergraduate TA, Fall 2016 & Fall 2017
-            </li>
-        </ul>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-medium w3-padding-16 w3-border-bottom">
+    <span class="w3-left w3-cell w3-cell-middle"><h2 style="margin: 0 0 0 0;" class="w3-large">sohyeon hwang</h2></span>
+    <a href="javascript:void(0)" class="w3-right w3-white w3-medium w3-border-0" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-animate-opacity" style="margin-left:310px; margin-top:30px;">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- About section -->
+  <div class="w3-container" id="about">
+    <img src="/imgs/sohw.jpg" alt="a pic of me" id="user-pic" class="w3-image w3-hide-large w3-right w3-padding"/>
+    <p>My name is Sohyeon Hwang. I'm a first-year PhD student in the <a target="_blank" href="https://communication.northwestern.edu/programs/phd_media_technology_society">Media, Technology, and Society</a> program at Northwestern University, advised by <a href="http://www.aaronshaw.org/" target="_blank">Dr. Aaron Shaw</a> and part of the <a href="https://communitydata.science/" target="_blank">Community Data Science Collective</a>. </p>
+    <p>My research interests center around governance (broadly speaking) and online participation. I currently focus on the complexity of governance in large-scale social computing systems, especially platforms following decentralized modes of moderation and rule enforcement like Reddit and Wikipedia. I'm particularly interested in the disparities/heterogeneous experiences that arise on these platforms, often as a result of various (social + technical) governing mechanisms.</p><br>
+    <p>In my non-academic life, I volunteer as a tutor with the cool folks at <a href="https://www.girlforward.org/what-we-do" target="_blank">GirlForward</a> and like to hang around museums + take pictures on my point-and-shoot.</p>
+    <br/>
+    <p>You can see my full <b>CV</b> as a PDF <a href="/docs/sohw_cv_aug2019.pdf">here</a>.</p>
+  </div>
+  <hr>
+  <div class="w3-container" id="projects">
+    <h2>projects</h2>
+    coming soon (once I have the time to put info up)!
+  </div>
+  <hr>
+  <div class="w3-container" id="updates">
+    <h2>recent updates</h2>
+    <ul>
+        <li><b>Sept. 2019 - </b>Began my PhD in the Media, Technology, and Society program at Northwestern University</li>
+    </ul>
+  </div>
+  <hr>
+  <div class="w3-container" id="past">
+    <h2>some past stuff</h2>
+    <p>Before I came to Northwestern, I completed my B.A. at Cornell University, doubly majoring in Government and Information Science. I mostly focused on a mix of Cold War era politics, revolutions, and the politics of violence in the former + data science in the latter. I like drawing from multiple fields and disciplines. </p>
+    <p>After I graduated, I was a <a href="https://www.emmabowenfoundation.com/sohyeon_hwang" target="_blank">Emma Bowen Summer Fellow</a> on the Audience team at Reveal from the Center for Investigative Reporting, where I saw many interesting ideas from my undergraduate studies manifest concretely, giving me the final push to apply to graduate school. And now I am here.<p>
+  </div>
+  <hr>
+  <!-- Contact section -->
+  <div class="w3-container" id="contact">
+    <h2>contact</h2>
+    <p>I'm best reached by email. If I don't respond in about 3 days, don't hesitate to send a little follow-up :^) On the Evanston campus, I can usually be found at 2-419 Frances Searle.</p>
+    <p><b>email: </b> sohyeonhwang [at] u.northwestern.edu</p>
+
+    <div>
+        <img src="/imgs/github_icon.png" style="width:28px;padding: 3px 12px 0px 0px;" alt="Github logo"/>
+        <a href="https://github.com/sohyeonhwang" target="_blank">github</a>
     </div>
-
-    <div id="pubs" class="section">
-        <h2>publications</h2>
-        <ul class="formatted">
-            <li></li>
-        </ul>
-        <h2>non-archival publications, posters, and workshops</h2>
-        <ul class="formatted">
-            <li></li>
-        </ul>
-
+    <div itemscope itemtype="https://schema.org/Person">
+        <img src="/imgs/orcid_icon.png" style="width:28px;padding: 3px 12px 0px 0px;" alt="ORCID iD icon"/>
+        <a itemprop="sameAs" content="https://orcid.org/0000-0001-8415-7395" href="https://orcid.org/0000-0001-8415-7395" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;">orcid: 0000-0001-8415-7395</a>
     </div>
-
-    -->
-
-    <!--end content div-->
+    <div>
+        <img src="/imgs/linkedin_icon.png" style="width:28px;padding: 3px 12px 0px 0px;" alt="LinkedIn icon"/>
+        <a href="https://www.linkedin.com/in/sohyeonhwang/" target="_blank">linkedin</a>
     </div>
+    <div>
+        <img src="/imgs/twitter_icon.png"  style="width:28px;padding: 3px 12px 0px 0px;" alt="Twitter icon"/>
+        <a href="https://twitter.com/sohwng">twitter</a>
+    </div>
+  </div>
 
-  </body>
+  <!-- Footer -->
+  <footer class="w3-container w3-bottom w3-padding">
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+
+</body>
 </html>
-

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sohyeon Hwang is a PhD Student in the Media, Technology, and Society program at Northwestern University." />
+
+    <title>sohyeon hwang | media, technology, and society</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <link rel="shortcut icon" href="/imgs/sohw.jpg">
+
+</head>
+
+<body>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-animate-left w3-collapse w3-top w3-center w3-border-right w3-display-container" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+
+    <div class="w3-padding-64 w3-center">
+        <h2 class="w3-large">sohyeon hwang</h2>
+        <h3>phd student<br>media, technology, society<br>northwestern university</h3>
+        <div id="icons" class="w3-padding-16">
+            <a href="https://github.com/sohyeonhwang" target="_blank" class="w3-border-0">
+                <img src="/imgs/github_icon.png" style="width:20px;" alt="Github logo"/>
+            </a>
+            <a itemprop="sameAs" content="https://orcid.org/0000-0001-8415-7395" href="https://orcid.org/0000-0001-8415-7395" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;" class="w3-border-0">
+                <img src="/imgs/orcid_icon.png" style="width:20px;" alt="ORCID iD icon"/>
+            </a>
+            <a href="https://www.linkedin.com/in/sohyeonhwang/" target="_blank" class="w3-border-0">
+                <img src="/imgs/linkedin_icon.png" style="width:20px;" alt="LinkedIn icon"/>
+            </a>
+            <a href="https://twitter.com/sohwng" target="_blank" class="w3-border-0">
+            <img src="/imgs/twitter_icon.png"  style="width:20px;" alt="Twitter icon"/>
+            </a>
+        </div>
+
+        <img src="/imgs/sohw.jpg" alt="a pic of me" id="user-pic-bar" class="w3-hide-small w3-hide-medium w3-show w3-block w3-center"/>
+
+        <a href="/" onclick="w3_close()" class="">home</a> / 
+        <a href="/docs/sohw_cv_aug2019.pdf" onclick="w3_close()" class="">cv</a> / 
+        <a href="/#contact" onclick="w3_close()" class="">contact</a>
+
+    </div>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-display-bottommiddle w3-padding-64 w3-block w3-hide-large w3-border-0">>>> close <<<</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-medium w3-padding-16 w3-border-bottom">
+    <span class="w3-left w3-cell w3-cell-middle"><h2 style="margin: 0 0 0 0;" class="w3-large">sohyeon hwang</h2></span>
+    <a href="javascript:void(0)" class="w3-right w3-white w3-medium w3-border-0" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-animate-opacity" style="margin-left:310px; margin-top:30px;">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- About section -->
+  <div class="w3-container" id="datasets">
+    I like to occassionally make datasets that interest me. Feel free to use them for courses, data visualizations, etc. etc. :) Please share the results of playing with the data! I would love to see it.
+
+    <ul>
+      <li><a target="_blank" href="">supreme court judges & decisions</a></li>
+      <li><a target="_blank" href="">terms of service texts</a></li>
+      <li><a target="_blank" href=""></a></li>
+      <li><a target="_blank" href=""></a> ... more to come? </li>
+      <!-- <li><a target="_blank" href=""></a></li> -->
+    </ul>
+    
+  </div>
+  <hr>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-bottom w3-padding">
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+
+</body>
+</html>

@@ -31,7 +31,10 @@ p {
 }
 
 ul {
+    list-style:none;
+    margin-left: 0;
     padding-left: 16px;
+    text-indent: -16px;
 }
 
 hr {
@@ -92,6 +95,13 @@ a:hover {
 }
 
 /* local settings */
+.bulleted {
+    list-style-type:"+ ";
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    text-indent:0px;
+}
 
 #content {
     margin: 0 auto;

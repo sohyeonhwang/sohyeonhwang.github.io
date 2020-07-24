@@ -103,6 +103,14 @@ a:hover {
     text-indent:0px;
 }
 
+.arrow {
+    list-style-type:"> ";
+    margin-top: 0px;
+    margin-left: 15px;
+    padding-left: 0px;
+    text-indent: 0px;
+}
+
 #content {
     margin: 0 auto;
 }

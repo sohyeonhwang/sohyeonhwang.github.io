@@ -110,10 +110,6 @@ a:hover {
     text-indent: 0px;
 }
 
-#content {
-    margin: 0 auto;
-}
-
 .center {
     margin: auto;
     width: 70%;
@@ -141,26 +137,37 @@ img {
     max-width: 200px;
 }
 
-/* https://code-boxx.com/simple-php-gallery-from-folder/ */
-/* (A) THUMBNAILS */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(4, auto); /* 3 ITEMS PER ROW */
-    grid-gap: 10px;
-    max-width: 1000px;
-    margin: 0 auto; /* HORIZONTAL CENTER */
-  }
-
-.gallery img {
+div.gallery img {
     width: 100%;
-    height: 200px;
-    /* FILL, CONTAIN, COVER, SCALE-DOWN : USE WHICHEVER YOU LIKE */
-    object-fit: cover;
+    height: auto;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+  
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
   }
   
-/* (B) RESPONSIVE - MOBILE FRIENDLY */
-  @media screen and (max-width: 640px) {
-    .gallery {
-      grid-template-columns: repeat(2, auto); /* 2 ITEMS PER ROW */
+@media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
     }
-  }
+}
+  
+@media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+}
+  
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

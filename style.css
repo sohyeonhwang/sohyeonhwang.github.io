@@ -137,6 +137,10 @@ img {
     max-width: 200px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 div.gallery img {
     width: 100%;
     height: auto;

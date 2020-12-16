@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sohyeon Hwang is a PhD Student in the Media, Technology, and Society program at Northwestern University." />
+
+    <title>sohyeon hwang | media, technology, and society</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <link rel="shortcut icon" href="/imgs/sohw.jpg">
+
+</head>
+
+<body>
+    <div id="header">
+    <h2 class="w3-top" style="position:fixed;top:0;width:100%;text-align:left; margin: 0 0 0 0; padding: 8px 0px 12px 16px;background:rgba(255, 255, 255,0.6);">//</h2>
+    <ul class="w3-navbar w3-top w3-center" style="position:fixed;top:0;width:100%;padding-left:0;text-indent:0;margin-top:12px;margin-bottom:12px;">
+        <li style="display:inline;" class="w3-hide-small"><a href="/">about</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/research.html">research</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/35mm.html">35mm+art</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/archives.html">archives</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/contact.html">contact</a></li>
+
+        <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button w3-hover-none w3-hide-large w3-hide-medium" onclick="naviChange()" style="padding-top:0px;padding-bottom:0px;">&#9776;</a>
+
+        <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-border-bottom w3-border-grey">
+            <a href="/" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">about</a>
+            <a href="/research.html" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">research</a>
+            <a href="/" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">archives</a>
+            <a href="/" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">35mm+art</a>
+            <a href="/contact.html" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">contact</a>
+        </div>
+    </ul>
+    </div>
+
+    <div class="center">
+    <p>some of my favorite 35mm i've shot over the years, and some things i've made. i normally shoot on point-and-shoots: the Olympus Trip 35 or the Olympus &micro;[mju:] ZOOM 140 (not the ii, sadly). i've recently nabbed an Olympus XA rangefinder.</p>
+
+    <div id="gallery">
+    <!-- code related to making gallery is from: https://code-boxx.com/simple-php-gallery-from-folder/ -->
+    <?php 
+        $dir = __DIR__ . DIRECTORY_SEPARATOR . "photos" . DIRECTORY_SEPARATOR;
+        $images = glob($dir . "*.{jpg,jpeg,gif,png,bmp,webp}", GLOB_BRACE);
+
+        foreach ($images as $i) {
+        printf("<img src='/photos/$i'/>");
+        }
+    ?>
+    </div>
+    </div>
+
+<script>
+// script for toggling display of divs
+// from: https://stackoverflow.com/a/8454174/12893290
+function toggledisplay(elementID) {
+    (function(style) {
+        style.display = style.display === 'none' ? '' : 'none';
+    })(document.getElementById(elementID).style);
+}
+
+function naviChange() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

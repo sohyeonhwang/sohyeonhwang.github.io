@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sohyeon Hwang, PhD student | Research" />
+
+    <title>sohyeon | research</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <link rel="shortcut icon" href="/imgs/sohw.jpg">
+
+</head>
+
+<body>
+    <div id="header">
+    <h2 class="w3-top" style="position:fixed;top:0;width:100%;text-align:left; margin: 0 0 0 0; padding: 8px 0px 12px 16px;background:rgba(255, 255, 255,0.6);">/research</h2>
+    <ul class="w3-navbar w3-top w3-center" style="position:fixed;top:0;width:100%;padding-left:0;text-indent:0;margin-top:12px;margin-bottom:12px;">
+        <li style="display:inline;" class="w3-hide-small"><a href="/">about</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/research.html">research</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/35mm.html">35mm+art</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/archives.html">archives</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/contact.html">contact</a></li>
+
+        <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button w3-hover-none w3-hide-large w3-hide-medium" onclick="naviChange()" style="padding-top:0px;padding-bottom:0px;">&#9776;</a>
+
+        <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-border-bottom w3-border-grey">
+            <a href="/" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">about</a>
+            <a href="/research.html" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">research</a>
+            <a href="/" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">archives</a>
+            <a href="/" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">35mm+art</a>
+            <a href="/contact.html" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">contact</a>
+        </div>
+    </ul>
+    </div>
+
+    <div class="center">
+    <p>The core of my work is an interest in how different groups of people resolve ambiguities in governance and management, including how they variously innovate beyond, subvert, and co-opt platform constraints and allowances; what implications the governing work of these groups has on platform-level regulatory effectiveness; and in what ways current ideas about 'online governance' might be inadequate.</p>
+    <p>I tend towards computational/quantitative methods, primarily computational social science, but I also do some more qualitative work and am in general fairly methods-agnostic.</p>
+    <p>I have two main projects right now: (1) looking at distributed rule development and enforcement across multiple language editions of Wikipedia, and (2) studying information loss as content spreads across platforms. I'm also working on projects under NSF grant <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1910202&HistoricalAwards=false" target="_blank">IIS-1617468</a> and helping to maintain some data collection for the <a target='_blank' href='https://wiki.communitydata.science/COVID-19_Digital_Observatory'>CDSC COVID-19 Digital Observatory</a>.</p>
+    <p>I'm always excited about new collaborations, so please do <a href="/contact.html">get in touch</a> :)</p>
+    </div>
+
+    <div class="center">
+    <h2>publications</h2>
+        <i>posters, presentations, and talks (non-archival)</i>
+        <ul class="bulleted">
+        <li><b>Hwang, S.</b> and Shaw, A. (2020) Heterogeneous practices in collective governance. Collective Intelligence 2020 (CI 2020). Boston & Copenhagen (Virtually held). [<a href="/docs/WikiPI_CI2020_02292020_1.pdf">pdf</a>] </li>
+        <li>Rahm, B. G., <b>Hwang, S.</b>, Joo, T., Teuffer, K., Vedachalam, S., Grantham, D., & Riha, S. J. (2016) Making the case for OWTS management: lessons from case studies and research. In AGU Fall Meeting 2016 Abstracts. San Francisco, CA. [<a href="/docs/AGU2016.pdf">pdf</a>]</li>
+        </ul>
+
+    </div>
+    </div>
+
+<script>
+// script for toggling display of divs
+// from: https://stackoverflow.com/a/8454174/12893290
+function toggledisplay(elementID) {
+    (function(style) {
+        style.display = style.display === 'none' ? '' : 'none';
+    })(document.getElementById(elementID).style);
+}
+
+function naviChange() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+
+</body>
+</html>

@@ -16,103 +16,61 @@
 </head>
 
 <body>
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-animate-opacity" style="margin-left:50px; margin-top:20px;">
+    <div id="header">
+    <h2 class="w3-top" style="position:fixed;top:0;width:100%;text-align:left; margin: 0 0 0 0; padding: 8px 0px 12px 16px;background:rgba(255, 255, 255,0.6);">//</h2>
+    <ul class="w3-navbar w3-top w3-center" style="position:fixed;top:0;width:100%;padding-left:0;text-indent:0;margin-top:12px;margin-bottom:12px;">
+        <li style="display:inline;" class="w3-hide-small"><a href="/">about</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/research.html">research</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/35mm.html">35mm+art</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/archives.html">archives</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/contact.html">contact</a></li>
 
-  <!-- About section -->
-  
-  <div class="w3-container" id="about">
-  <h1>sohyeon hwang</h1>
-    <h2>info</h2>
-    <ul class="arrow">
-        <li>2nd year PhD student in the <a target="_blank" href="https://communication.northwestern.edu/programs/phd_media_technology_society">Media, Technology, and Society</a> program @ Northwestern University</li>
-        <li>advised by <a href="http://www.aaronshaw.org/" target="_blank">Aaron Shaw</a> and part of the <a href="https://communitydata.science/" target="_blank">Community Data Science Collective</a></li>
-        <li>i also work with <a href="http://www.agneshorvat.info/" target="_blank">Ágnes Horvát</a> :)</li>
-        <li>my studies are generously supported by the <a target="_blank" href="https://www.nsfgrfp.org/">NSF GRFP</a>; for research interests + work, see research work below</li>
-        <li>i'm a co-organizer of a <a href="#rclick">reading group</a> (below) in my department as well as the <a href="http://metagov.org/seminar/" target="_blank">metagov seminar</a></li>
-        <li>non-academic life: french fries, naps, volunteering @ <a href="https://www.girlforward.org/what-we-do" target="_blank">GirlForward</a>, and blurry 35 mm</li>
+        <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button w3-hover-none w3-hide-large w3-hide-medium" onclick="naviChange()" style="padding-top:0px;padding-bottom:0px;">&#9776;</a>
+
+        <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-border-bottom w3-border-grey">
+            <a href="/" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">about</a>
+            <a href="/research.html" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">research</a>
+            <a href="/" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">archives</a>
+            <a href="/" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">35mm+art</a>
+            <a href="/contact.html" class="w3-bar-item w3-button w3-white w3-center w3-hover-white w3-hover-text-white" style="padding:0 0 0 0">contact</a>
+        </div>
     </ul>
-    last updated: 18 sept 2020
-  </div>
-  <hr>
+    </div>
 
-  <div class="w3-container" id="shenanigans">
-  <h2>more info</h2>
-    --- c.v. (updated august 2019) [<a href="/docs/sohw_cv_aug2019.pdf">pdf</a>]<br/>
+    <div class="center">
+    <h2>sohyeon hwang</h2>
+    <p>I'm a 2nd year PhD student in the <a target="_blank" href="https://communication.northwestern.edu/programs/phd_media_technology_society">Media, Technology, and Society</a> program @ Northwestern University, advised by <a href="http://www.aaronshaw.org/" target="_blank">Aaron Shaw</a> and part of the <a href="https://communitydata.science/" target="_blank">Community Data Science Collective</a>. I also work with <a href="https://agneshorvat.soc.northwestern.edu/" target="_blank">Ágnes Horvát</a> over at <a>LINK</a> :) My studies are generously supported by the <a target="_blank" href="https://www.nsfgrfp.org/">NSF GRFP</a>.</p>
 
-    --- <a onclick="toggledisplay('pubs');">publications<br/></a>
-        <div id="pubs"  style="display:none; margin-left: 26px;">
-        <i>posters, presentations, and talks (non-archival)</i>
-        <ul class="bulleted">
-        <li><b>Hwang, S.</b> and Shaw, A. (2020) Heterogeneous practices in collective governance. Collective Intelligence 2020 (CI 2020). Boston & Copenhagen (Virtually held). [<a href="/docs/WikiPI_CI2020_02292020_1.pdf">pdf</a>] </li>
-        <li>Rahm, B. G., <b>Hwang, S.</b>, Joo, T., Teuffer, K., Vedachalam, S., Grantham, D., & Riha, S. J. (2016) Making the case for OWTS management: lessons from case studies and research. In AGU Fall Meeting 2016 Abstracts. San Francisco, CA. [<a href="/docs/AGU2016.pdf">pdf</a>]</li>
-        </ul>
-        </div>
-    --- <a onclick="toggledisplay('projs');">research work<br/></a>
-        <div id="projs" style="display:none; margin-left: 26px;">
-        My research interests center around governance (broadly construed: rules, admins, design) of online spaces on the scale of multi-community + multi-platform analyses. Right now, I'm particularly interested in the complexity of governing large-scale social computing systems, especially platforms following decentralized modes of moderation like Reddit and Wikipedia.
-        <ul class="bulleted">
-            <li id="p1"><b>understanding heterogeneous governance practices -</b> The scale and lack of overarching structure on platforms such as Reddit and Wikipedia often result in sub-communities localizing their use of high-level rules (e.g. what's harassment?). Rule localization by sub-communtities provides a key mechanism by which governance operates in such decentralized spaces, but the effect of this localization remains unclear. We evaluate the extent to which shared rules diverge in practice across sub-communities to shed light on the implications of heterogeneous governance practices on regulatory effectiveness, platform accountability, and intervention possibilities.</li>
-            <li id="p2"><b>ecologies of online communities -</b> (NSF grant: <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1910202&HistoricalAwards=false" target="_blank">IIS-1617468</a>, PI: Aaron Shaw), specifically looking at small and mid-sized "niche" communities</li>
-            <li id="p3"><b>multi-platform information diffusion -</b> (NSF grant: <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1943506&HistoricalAwards=false" target="_blank">IIS-1943506</a>, PI: Ágnes Horvát), specifically looking at evaluating information across platforms + groups</li>
-            <li id="p4"><b>covid-19 digital observatory -</b> more information can be found <a target='_blank' href='https://wiki.communitydata.science/COVID-19_Digital_Observatory'>here</a>.</li>
-        </ul>
-        </div>
-    --- <a onclick="toggledisplay('datas');">datasets<br/></a>
-        <div id="datas"  style="display:none; margin-left: 26px;">
-        sometimes i like to make / maintain datasets. links coming soon!
-        <!--
-        <ul class="bulleted">
-            <li>supreme court dataset</li>
-            <li>terms of service (simple script to parse the TOSBack git)</li>
-        </ul>
-        -->
-        </div>
-    --- <a id="rclick" onclick="toggledisplay('reading');">reading group / book club<br/></a>
-        <div id="reading" style="display:none; margin-left: 26px;">
-        i help organize a phd reading group to read and discuss some books + work that critically examine the role of technology and media in upholding existing systems of oppression. get in touch if you're interested! we read Ruha Benjamin's "Race After Technology: Abolitionist Tools for the New Jim Code" over the summer and are reading Sasha Costanza-Chock's "Design Justice: Community-Led Practices to Build the Worlds We Need" for fall 2020.
-        <br/>
-        </div>
-  </div>
-  <hr>
+    <p>My research is inherently interdisciplinary, centered around understanding the landscape of governance in online spaces on the scale of multi-community + multi-platform analyses. Right now, I'm interested in the complexity of governing large-scale social computing systems, especially those following decentralized modes of moderation (e.g. Reddit, Wikipedia) that result in diverse notions of governance across subcommunities. You can read more about my projects and see publications over at the <a href="/research.html" >research</a> page.</p>
 
-  <div class="w3-container" id="updates">
-    <h2>recent updates</h2>
+    <p>These days, I'm a co-organizer of a PhD student reading group focused on critical readings of technology/media &mdash; now under <a href="https://hci.northwestern.edu/" target="_blank">HCI+D</a> &mdash; as well as the <a href="http://metagov.org/seminar/" target="_blank">Metagov Seminar</a>. My non-academic life often involves eating french fries, volunteering @ <a href="https://www.girlforward.org/what-we-do" target="_blank">GirlForward</a>, and shooting blurry 35 mm.</p>
+
+    <a onclick="toggledisplay('morebg');" style="color:grey;border-bottom:none;">+ click for *even more* about sohyeon<br/></a>
+    <div id="morebg" style="display:none;">
+    <p>I received my BA from Cornell University, where I double-majored in Government and Information Science. I focused on revolutions and ideology (mostly focusing on 20th-century-ish Europe) in the former and data science and ethics in the latter &mdash; a slightly strange mix that brought me to where I am now. As an undergrad, I was fortunate to work with a variety of folks: the <a href="https://wri.cals.cornell.edu/" target="_blank">New York State Water Resources Institute</a>, the <a href="http://ccetompkins.org/energy/get-your-green-back-tompkins" target="_blank">Get Your Green Back Tompkins</a> campaign, and Dr. Victor Nee over at the <a href="http://www.economyandsociety.org/" target="_blank">Center for the Study of Economy and Society</a>. Between Cornell and Northwestern, I was an <a href="https://www.emmabowenfoundation.com/about_us" target="_blank">Emma Bowen Foundation Summer Fellow</a> at <a href="https://revealnews.org/" target="_blank">Reveal / Center for Investigative Reporting</a> on the Audience Team.</p>
+
+    </div>
+    <br/>
+    <i>last updated:</i> 15 apr 2021
+    </div>
+
+    <div class="center">
+    <h2>recent news</h2>
     <ul class="arrow">
         <li><b>2020/05 - </b>Presented an extended abstract at <a href="https://ci2020.weebly.com/" target="_blank">CI2020</a>.</li>
-        <li><b>2020/03 - </b>Just got notified that I've received the <a target="_blank" href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>! 🎉</li>
+        <li><b>2020/03 - </b>Got notified that I've received the <a target="_blank" href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>! 🎉</li>
+        </ul>
+
+    <a onclick="toggledisplay('morenews');" style="color:grey;border-bottom:none;">+ older news<br/></a>
+    <div id="morenews" style="display:none;">
+    <ul class="arrow">
         <li><b>2019/09 - </b>Began my PhD program in the MTS program at Northwestern University.</li>
+        <li><b>2018/12 - </b>The Emma Bowen Foundation wrote a <a href="https://www.emmabowenfoundation.com/sohyeon_hwang" target="_blank">little profile</a> about my experience as a fellow :)</li>
     </ul>
-  </div>
-  <hr>
+    </div>
+    </ul>
 
-  <div class="w3-container" id="contact">
-    <h2>contact</h2>
-    <p><b>email: </b> sohyeonhwang [at] u.northwestern.edu</p>
-    <div>
-        <img src="/imgs/github_icon.png" style="width:28px;padding: 3px 12px 0px 0px;" alt="Github logo"/>
-        <a href="https://github.com/sohyeonhwang" target="_blank">github</a>
     </div>
-    <div itemscope itemtype="https://schema.org/Person">
-        <img src="/imgs/orcid_icon.png" style="width:28px;padding: 3px 12px 0px 0px;" alt="ORCID iD icon"/>
-        <a itemprop="sameAs" content="https://orcid.org/0000-0001-8415-7395" href="https://orcid.org/0000-0001-8415-7395" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;">orcid: 0000-0001-8415-7395</a>
-    </div>
-    <div>
-        <img src="/imgs/linkedin_icon.png" style="width:28px;padding: 3px 12px 0px 0px;" alt="LinkedIn icon"/>
-        <a href="https://www.linkedin.com/in/sohyeonhwang/" target="_blank">linkedin</a>
-    </div>
-    <div>
-        <img src="/imgs/twitter_icon.png"  style="width:28px;padding: 3px 12px 0px 0px;" alt="Twitter icon"/>
-        <a href="https://twitter.com/sohwng" target="_blank">twitter</a>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="w3-container w3-bottom w3-padding">
-  </footer>
-
-<!-- End page content -->
-</div>
 
 <script>
 // script for toggling display of divs
@@ -121,6 +79,15 @@ function toggledisplay(elementID) {
     (function(style) {
         style.display = style.display === 'none' ? '' : 'none';
     })(document.getElementById(elementID).style);
+}
+
+function naviChange() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 </script>
 

@@ -97,7 +97,7 @@ a:hover {
 .bulleted {
     list-style-type:"+ ";
     margin-top: 0px;
-    margin-left: 0px;
+    margin-left: 15px;
     padding-left: 0px;
     text-indent:0px;
 }
@@ -112,11 +112,53 @@ a:hover {
 
 .center {
     margin: auto;
-    width: 70%;
-    min-width: 300px;
+    width: 75%;
+    min-width: 250px;
     max-width: 1000px;
-    padding-top: 50px;
+    margin-top: 60px;
+    padding: 10px 20px 10px 20px;
+    border:1px grey solid;
   }
+
+.top-center-block{
+    margin-top:80px;
+}
+
+.about-section{
+    margin-top:80px;
+}
+
+.header-faded {
+    background:rgba(255, 255, 255,0.6);
+    position:fixed;
+    top:0;
+    width:100%;
+    text-align:left; 
+    margin: 0 0 0 0; 
+    padding: 8px 0px 8px 16px;
+}
+
+.navi-bar-top{
+    position:fixed;
+    top:0;
+    width:100%;
+    text-indent:0;
+    padding-right:0;
+    padding-left:0;
+    padding-top:8px;
+    padding-bottom: 0px;
+    margin: 0 0 0 0;
+}
+
+.header-faded-navilinks{
+    display:block;
+    background:rgba(255, 255, 255,0.6);
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left: 0;
+    text-indent: 0;
+    margin: 0 0 0 0;
+}
 
 img {
     width: 20vw;

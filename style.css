@@ -1,29 +1,16 @@
 /* global settings */
 body {
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Inconsolata',monospace;
     font-size: 12pt;
     margin-bottom: 50px;
     /*max-width: 1000px;*/
 }
 
-h1 {
-    font-family: "Segoe UI",Arial,sans-serif;
-    font-weight: bold;
-}
-
-h2 {
+/*h2 {
     font-weight: bold;
     font-size: 14pt;
     font-family: "Segoe UI",Arial,sans-serif;
-}
-
-h3 {
-    font-weight: bold;
-    color: gray;
-    font-size: 10pt;
-    font-family: 'Ubuntu Mono', monospace;
-    margin-bottom: 0px;
-}
+}*/
 
 p {
     margin: 5px 0px 10px 0px;
@@ -40,6 +27,13 @@ hr {
     margin-top: 10px;
     margin-bottom: 10px;
     border-top: 1px solid #D8D8D8;
+}
+
+footer{
+    padding-bottom:10px;
+    margin: auto;
+    margin-top:60px;
+    text-align: center;
 }
 
 /* links */
@@ -94,6 +88,10 @@ a:hover {
 }
 
 /* local settings */
+.w3-cell{
+    width: 600px;
+}
+
 .bulleted {
     list-style-type:"+ ";
     margin-top: 0px;
@@ -116,7 +114,7 @@ a:hover {
     min-width: 250px;
     max-width: 1000px;
     margin-top: 60px;
-    padding: 10px 20px 10px 20px;
+    padding: 0 0;
     border:1px grey solid;
   }
 
@@ -165,18 +163,10 @@ img {
     margin: 0 auto;
 }
 
-#user-pic {
-    width: 30vw;
-    min-width: 125px;
-    max-width: 200px;
-}
-
-#user-pic-bar {
-    padding-top:16px;
-    padding-bottom:32px;
-    width: 30vw;
-    min-width: 125px;
-    max-width: 200px;
+.proj-img {
+    width:100%;
+    height:250px;
+    object-fit:cover;
 }
 
 * {
@@ -185,7 +175,8 @@ img {
 
 div.gallery img {
     width: 100%;
-    height: auto;
+    height: 150px;
+    object-fit:cover;
 }
   
 div.desc {
@@ -204,6 +195,7 @@ div.desc {
       width: 49.99999%;
       margin: 6px 0;
     }
+
 }
   
 @media only screen and (max-width: 500px) {

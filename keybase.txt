@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/sohw
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.sohyeonhwang.com
+  * I am sohw (https://keybase.io/sohw) on keybase.
+  * I have a public key ASC7fjotAIBiJ1CrmO9gDWuWwkB4crqRRJr2Uu3dbhY0mwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120bb7e3a2d0080622750ab98ef600d6b96c2407872ba91449af652eddd6e16349b0a",
+      "host": "keybase.io",
+      "kid": "0120bb7e3a2d0080622750ab98ef600d6b96c2407872ba91449af652eddd6e16349b0a",
+      "uid": "244d89c20de65244c8ba3bfd1709b719",
+      "username": "sohw"
+    },
+    "merkle_root": {
+      "ctime": 1651177668,
+      "hash": "a72446cb4f38eab5dc800adfa5544780d263abb4355a9cb9220387ec882a5e4fc5afb54c50d7ca9c37e0c6c0a59ea7b937bbd29a2f690a04a1cfcb7cfedba0a6",
+      "hash_meta": "36df0a7d68e64e4c514a67d2a9bba585ba19e8a6fa24e9ee0c54dd8ccdbe55c6",
+      "seqno": 22382588
+    },
+    "service": {
+      "entropy": "l7v4MO188YgCqTotml+P/80I",
+      "hostname": "www.sohyeonhwang.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.0"
+  },
+  "ctime": 1651177727,
+  "expire_in": 504576000,
+  "prev": "199aaf4b35db07027d333e5b13b53e768e8da5851652844e72b939048ff8e9da",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgu346LQCAYidQq5jvYA1rlsJAeHK6kUSa9lLt3W4WNJsKp3BheWxvYWTESpcCCcQgGZqvSzXbBwJ9Mz5bE7U+do6NpYUWUoROcrk5BI/46drEIKWd6RQf/UupoZPI98WU083dnSHH4OkOyJPxDaCLpuiqAgHCo3NpZ8RAVMmjus0vpuhLbwGo1bOdc+Tyq+NhwEUQbV5XJ8fC9JKGhOBtaHSAHOWgyRPgSDFtCe2EoKPj9GGoMjBXYrfBB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDXPotZBEi8XmOZ7DK5kptDWF040snzj0tdE6wZ7MQf9o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sohw
+
+==================================================================

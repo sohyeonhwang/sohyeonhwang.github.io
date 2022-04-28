@@ -7,11 +7,11 @@
 
     <title>sohyeon | research</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="style.css" type="text/css">
-    
     <link rel="shortcut icon" href="/imgs/sohw.jpg">
 
 </head>
@@ -48,37 +48,26 @@
     <div class="w3-container w3-mobile">
     <p>[<a href="/docs/hwang_cv_20FEB2022.pdf">cv</a>]</p>
     <p>I study organization, governance, and collaboration in social computing systems, generally via multi-community/multi-platform studies to understand heterogeneous practices across diverse and overlapping online spaces.</p>
-    <p>If you're interested in collaborating or have any questions, please <a href="/contact.html">get in touch</a> :)</p>
-    <p><a onclick="toggledisplay('moreresearch');" style="color:grey;border-bottom:none;">+ more about my research</a></p>
+    <p><a onclick="toggledisplay('moreresearch');" style="color:grey;border-bottom:none;"><b>+ more about my research</b></a></p>
     <div id="moreresearch" style="display:none;">
-    <ul class="arrow">
-        <li>i tend towards interview studies and computational methods, but in principle i am fairly methods-agnostic;</li>
-        <li>in looking at social dynamics in online spaces, i'm often motivated by questions of accountability, the role of user innovation/participation, the relationship between heterogeneity and scale, and what behavioral patterns tell us about power + the effect of platform/technology design choices (and what we can do about these things);</li>
-        <li>right now, i'm especially interested in complexities arising in decentralized and polycentric modes of governance. <i>e.g., how online groups variably develop, adapt, subvert rules + tools + platform affordances to govern themselves and the implications for platform-level regulatory effectiveness</i>.</li>
+    <ul class="bulleted">
+        <li>i tend towards <b>interview studies and computational methods</b>, but in principle i am fairly methods-agnostic;</li>
+        <li>in looking at <b>social and organizational dynamics in online spaces</b>, i'm often motivated by questions of accountability, the role of user innovation/participation, the relationship between heterogeneity and scale, and what behavioral patterns tell us about power + the effect of platform/technology design choices (and what we can do about these things);</li>
+        <li>right now, i'm especially interested in <b>complexities arising in decentralized and polycentric modes</b> of governance. <i>e.g., how online groups variably develop, adapt, subvert rules + tools + platform affordances to govern themselves and the implications for platform-level regulatory effectiveness</i>.</li>
     </ul>
     </div>
-    </div>
+
+    <p><a onclick="toggledisplay('currentprojects');" style="color:grey;border-bottom:none;"><b>+ current project overview</b></a></p>
+    <div id="currentprojects" style="display:none;">
+    <i>last updated 02/2022</i>
+    <ul class="bulleted">
+        <li><b>heterogeneous governance</b>,<br/>studying variation in governance development and enforcement across communities on platforms like Wikipedia and Reddit. some of this work is supported by NSF grant <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1910202&HistoricalAwards=false" target="_blank">IIS-1910202</a>.</li>
+        <li><b>scale + distort</b>,<br/>studying how scales affect information, content, and interactions e.g., information retention, the role of smallness, etc.</li>
+        <li><b>cdsc covid-19 digital observatory</b>,<br/>I help maintain some data collection of covid19 mentions in online spaces and search engines with my research group.</li>
+    </ul>
     </div>
 
-    <span id="projects"></span>
-
-    <div class="center">
-    <div class="w3-container w3-mobile">
-    <p><b>current projects</b></p>
-    </div>
-    <div class="Options w3-cell-row w3-center" style="width:100%;">
-        <div class="w3-container w3-cell w3-mobile">
-            <img src="/imgs/wikipi_2.png" alt="Visual representation of parallel communities" class="w3-border w3-border-grey proj-img"/>
-            <p><b>heterogeneous governance</b>,<br/>studying variation in governance development and enforcement across communities on platforms like Wikipedia and Reddit</p>
-        </div>
-        <div class="w3-container w3-cell w3-mobile">
-            <img src="/imgs/infoloss.png" alt="Image representation bursts of information" class="w3-border w3-border-grey proj-img"/>
-            <p><b>scale + distort</b>,<br/>studying how scales affect information, content, and interactions e.g., information retention, the role of smallness, etc.</p>
-        </div>
-    </div>
-    <div class="w3-container w3-mobile">
-    <p><br/>I'm also involved with <a target='_blank' href='https://wiki.communitydata.science/COVID-19_Digital_Observatory'>CDSC COVID-19 Digital Observatory</a> where I help maintain some data collection, and work on projects under NSF grant <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1910202&HistoricalAwards=false" target="_blank">IIS-1910202</a> on ecological approaches to online communities.</p>
-    </div>
+</div>
     </div>
     
     <span id="pubs"></span>
@@ -109,8 +98,6 @@
 
     </div>
     </div>
-
-    <footer>site by sohyeon hwang. <p><i>page last updated:</i> nov 2021</p></footer>
 
 <script>
 // script for toggling display of divs

@@ -4,8 +4,8 @@ html {
   }
 
 body {
-    font-family: 'Inconsolata',monospace;
-    font-size: 12pt;
+    font-family: 'Source Code Pro',monospace;
+    font-size: 10pt;
     margin-bottom: 50px;
     /*max-width: 1000px;*/
 }
@@ -21,7 +21,7 @@ p {
 }
 
 ul {
-    list-style:none;
+    list-style: none;
     margin-left: 0;
     padding-left: 16px;
     text-indent: -16px;
@@ -105,7 +105,7 @@ a:hover {
 }
 
 .arrow {
-    list-style-type:"> ";
+    list-style-type:"- ";
     margin-top: 0px;
     margin-left: 15px;
     padding-left: 0px;

@@ -117,17 +117,18 @@ a:hover {
     width: 75%;
     min-width: 250px;
     max-width: 700px;
-    margin-top: 60px;
+    margin-top: 30px;
     padding: 0 0;
     border:1px grey solid;
   }
 
 .top-center-block{
-    margin-top:80px;
+    margin-top:50px;
 }
 
-.about-section{
-    margin-top:80px;
+.borderless-section{
+    margin-top:50px;
+    border:0px grey solid;
 }
 
 .header-faded {
@@ -191,7 +192,7 @@ div.desc {
 .responsive {
     padding: 0 6px;
     float: left;
-    width: 24.99999%;
+    width: 20%;
   }
   
 @media only screen and (max-width: 700px) {

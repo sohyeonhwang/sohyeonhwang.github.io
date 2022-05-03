@@ -12,41 +12,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="shortcut icon" href="/imgs/sohw.jpg">
+    <link rel="shortcut icon" href="imgs/favicon.png">
 
 </head>
 
 <body>
-    <div id="header">
-        <p class="w3-top w3-hide-medium w3-hide-small w3-border-bottom w3-border-grey header-faded">sohyeon hwang</p>
-        <p class="w3-top w3-hide-large w3-hide-medium header-faded">sohyeon hwang</p>
-        <p class="w3-top w3-hide-large w3-hide-small w3-text-white header-faded">.</p>
-        <hr class="w3-top w3-hide-large w3-border-grey" style="margin-top:40px;">
-        <ul class="w3-navbar w3-top w3-center navi-bar-top">
-            <li style="display:inline;" class="w3-hide-small"><a href="/">about</a> / </li>
-            <li style="display:inline;" class="w3-hide-small"><a href="/research.html">research</a> / </li>
-            <li style="display:inline;" class="w3-hide-small"><a href="/teaching.html">teaching</a> / </li>
-            <li style="display:inline;" class="w3-hide-small"><a href="/archives.html">archives</a> / </li>
-            <li style="display:inline;" class="w3-hide-small"><a href="/contact.html">contact</a></li>
-    
-            <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button w3-hover-none w3-hide-large w3-hide-medium" onclick="naviChange()" style="display:block;padding-top:0px;padding-bottom:0px;">&#9776;</a>
-    
-            <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-border-bottom w3-border-grey">
-                <a href="/" class="header-faded-navilinks w3-button w3-center w3-hover-border-light-gray" style="margin-top:40px;">about</a>
-                <a href="/research.html" class="header-faded-navilinks w3-button w3-center w3-hover-border-light-gray">research</a>
-                <a href="/teaching.html" class="header-faded-navilinks w3-button w3-center w3-hover-border-light-gray">teaching</a>
-                <a href="/archives.html" class="header-faded-navilinks w3-button w3-center w3-hover-border-light-gray">archives</a>
-                <a href="/contact.html" class="header-faded-navilinks w3-button w3-center w3-hover-border-light-gray" style="padding-bottom:12px;">contact</a>
-            </div>
-        </ul>
-        </div>
+    <ul class="w3-navbar w3-top w3-center navi-bar-top">
+        <li style="display:inline;" class="w3-hide-small"><a href="/">sohyeon hwang</a> : </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/research.html">research</a> / </li>
+        <li style="display:inline;" class="w3-hide-small"><a href="/archives.html">archives</a></li>
 
+        <button class="w3-button w3-hover-none w3-left w3-hide-large w3-hide-medium" style="padding-top: 0px;padding-bottom: 0px;"><a href="/">sohyeon hwang</a></button>
+        <button class="w3-button w3-hover-none w3-right w3-hide-large w3-hide-medium" style="padding-top: 0px;padding-bottom: 0px;"><a href="javascript:void(0)" onclick="naviChange()" style="border-bottom:0px;">&#9776;</a></button>
+        <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-border-bottom w3-border-grey">
+          <a href="/research.html" class="header-faded-navilinks w3-button w3-center w3-hover-border-light-gray" style="margin-top:20px;">research</a>
+          <a href="/archives.html" class="header-faded-navilinks w3-button w3-center w3-hover-border-light-gray">archives</a>
+        </div>
+    </ul>
+  </div>
 
     <span id="overview"></span>
 
-    <div class="center top-center-block" >
+    <div class="center borderless-section">
+        <div class="w3-container w3-center w3-mobile">
+            <p>[<a href="/docs/hwang_cv_20FEB2022.pdf">cv</a>]</p>
+            <div itemscope itemtype="https://schema.org/Person">
+                <a itemprop="sameAs" content="https://orcid.org/0000-0001-8415-7395" href="https://orcid.org/0000-0001-8415-7395" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;">orcid: 0000-0001-8415-7395</a>
+            </div>
+        </div>
+      </div>    
+
+    <div class="center" >
     <div class="w3-container w3-mobile">
-    <p>[<a href="/docs/hwang_cv_20FEB2022.pdf">cv</a>]</p>
     <p>I study organization, governance, and collaboration in social computing systems, generally via multi-community/multi-platform studies to understand heterogeneous practices across diverse and overlapping online spaces.</p>
     <p><a onclick="toggledisplay('moreresearch');" style="color:grey;border-bottom:none;"><b>+ more about my research</b></a></p>
     <div id="moreresearch" style="display:none;">
@@ -88,8 +85,13 @@
         </ul>
         -->
 
-        <i>posters, presentations, and talks (non-archival, peer-reviewed)</i>
+        <i>posters, presentations, and talks (peer-reviewed, non-archival)</i>
         <ul class="bulleted">
+        <li><b>Hwang, S.</b>, Horvát, E-A., and Romero, D. 2022, multiple venues. Information retention in multi-platform discussions of science. </li>
+            <ul class="arrow">
+                <li>Poster presentation @ International Conference on Computational Social Science (IC2S2) 2022, 19-22 July 2022. Chicago, IL.</li>
+                <li>Poster presentation @ International Conference on the Science of Science and Innovation (ICSSI) 2022. June 7-9, 2022. Washington DC, USA.</li>
+            </ul>
         <li><b>Hwang, S.</b> and Shaw, A. (2020) Heterogeneous practices in collective governance. Collective Intelligence 2020 (CI 2020). Boston & Copenhagen (Virtually held). [<a href="/docs/WikiPI_CI2020_02292020_1.pdf">pdf</a>] [<a href="https://youtu.be/5n4po2niXPM" target="_blank">recording</a>] </li>
         <li>Rahm, B. G., <b>Hwang, S.</b>, Joo, T., Teuffer, K., Vedachalam, S., Grantham, D., & Riha, S. J. (2016) Making the case for OWTS management: lessons from case studies and research. In AGU Fall Meeting 2016 Abstracts. San Francisco, CA. [<a href="/docs/AGU2016.pdf">pdf</a>]</li>
         </ul>

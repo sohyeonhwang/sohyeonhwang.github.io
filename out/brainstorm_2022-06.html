@@ -10,6 +10,7 @@
   </head>
   <body>
     <article class="markdown-body"><h1 id="wikipi-research-design-brainstorm"><a class="header-link" href="#wikipi-research-design-brainstorm"></a>WikiPI Research Design Brainstorm</h1>
+<p><em>Updated:</em> June 18, 2022</p>
 <p>My goal with WikiPI2.0 (still) is to track instances of policy invocation across multiple language editions. Fundamentally, I am interested in tracking use of <em>shared rules</em> across language editions.</p>
 <p>This project relies on a few moving parts as its data:</p>
 <ul class="list">
@@ -69,8 +70,15 @@
 </ul>
 <p>In 2019/2020, I had done some testing, and because the regex becomes so hopelessly gross, the <em>mega</em> version of making the <code>wikiq</code> call can be kind of buggy so I would rather not use it. However, the <em>wide</em> version of the <code>wikiq</code> call is quite slow (because it must look for many regular expressions separately). So there are trade-offs here to consider for determining which and how many rules to track.</p>
 <hr>
+<h2 id="next-steps-by-end-of-62022"><a class="header-link" href="#next-steps-by-end-of-62022"></a>Next steps (by end of 6/2022)</h2>
+<ul class="list">
+<li>Run wikiq calls (hoping to submit the jobs 6/21).</li>
+<li>Produce a very basic data descriptor (~6/29).</li>
+<li>Write the script (using pyspark) to crunch up some summary stats/numbers about rule use (~6/29). Can test in the coming days.</li>
+</ul>
+<hr>
 <p>You can stop reading here or skim the following as well for more context on what I plan to do with WikiPI in the coming months.</p>
-<h2 id="potential-outputs"><a class="header-link" href="#potential-outputs"></a>Potential outputs</h2>
+<h2 id="project-outputs"><a class="header-link" href="#project-outputs"></a>Project outputs</h2>
 <p>After I process this data in June 2022, there are a few manuscripts that I plan to churn out (and close the chapter on this WIKIPI journey for now).</p>
 <p><code>wikipi2.0</code>: Mapping variations in usage across language editions, to map patterns of <em>de facto</em> use of rules from their <em>de jure</em> forms. This one is the most confusing/unclear in form/shape/narrative. It may or may not include considering:</p>
 <ul class="list">

@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>WikiPI Research Design Brainstorm</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="wikipi-research-design-brainstorm"><a class="header-link" href="#wikipi-research-design-brainstorm"></a>WikiPI Research Design Brainstorm</h1>
+<p>My goal with WikiPI2.0 (still) is to track instances of policy invocation across multiple language editions. Fundamentally, I am interested in tracking use of <em>shared rules</em> across language editions.</p>
+<p>This project relies on a few moving parts as its data:</p>
+<ul class="list">
+<li>List of language editions we care about</li>
+<li>List of rules per language edition</li>
+<li>List of ways to reference each rule (e.g. shorthands such as WP:NPOV), made into regular expressions to detect</li>
+<li>Revision history dumps from Wikimedia, which will be processed with <code>wikiq</code>. I will search for revisions made <em>through the end of 2021</em> only.</li>
+</ul>
+<p>The output should be a dataset of each revision that contains a mention of a rule, for the rules and language editions we constrain the project to.</p>
+<h2 id="research-design"><a class="header-link" href="#research-design"></a>Research design</h2>
+<p><strong>The things I need to decide (and would most like thoughts + feedback on) are therefore (1) how many language editions should I process, and (2) how should I constrain the set of rules to search for?</strong></p>
+<h3 id="determining-how-many-language-editions-to-look-at"><a class="header-link" href="#determining-how-many-language-editions-to-look-at"></a>Determining how many language editions to look at:</h3>
+<p>I am currently considering three strategies to constrain the set of language editions I will process with this data.</p>
+<ul class="list">
+<li>Top 5 most active language editions (English, French, German, Japanese, Spanish).<ul class="list">
+<li>Pros: I already have the data dumps and have done a ICWSM paper looking at these language editions.</li>
+<li>Cons: Limited! People seem to like asking why I haven&#39;t looked at more language editions + want to know what smaller language editions are like, understandably so.</li>
+</ul>
+</li>
+<li>Top 10 most active language editions (the above, plus: Russian, Mandarin, Italian, Portugues, Persian).<ul class="list">
+<li>Pros: As said above, people seem to like asking why I haven&#39;t looked at more. The top 10 actually covers a very large range of &quot;active users&quot; (5.9k-119.1k), thought it&#39;s unclear if that&#39;s really substantively different from the the range that the top 5 covers (14.6k-119.1k).</li>
+<li>Cons: More languages to manage + more rule lists to figure out (which can be very time-consuming). Also, constructing analyses across more language editions becomes more of a headache, but maybe this is really a matter of just being better about constructing a good analysis.</li>
+</ul>
+</li>
+<li>Top 5 (or 10) most active language editions + some curated (with some interesting rationale I guess) set of small language editions.<ul class="list">
+<li>Pros and cons are basically same as above, but the added benefit with including smaller language editions is that I think it gives space for more nuances/interesting analyses that might be more convincing w.r.t. generalizability/applicability/implications of some of the findings. Also, people ask me about the smaller language editions (and having written a paper on small communities, I feel like... vaguely obliged to include them). And processing more data also means that there are just more possibilities for people to use later on, beyond the things I have slated in the coming months. However, more language editions = more data processing and computational time required. I don&#39;t want to spend computational time/energy unnecessarily.</li>
+</ul>
+</li>
+</ul>
+<p>(By <em>most active</em>, I mean with the most active users (per Wikipedia, active users are &quot;registered users who have made at least one edit in the last thirty days&quot;). This usually stays fairly consistent, but to be extra clear, this would be as of June 2022.)</p>
+<h3 id="determining-what-rules-to-look-at"><a class="header-link" href="#determining-what-rules-to-look-at"></a>Determining what rules to look at:</h3>
+<p>A few ways to construct the set of rules...</p>
+<ul class="list">
+<li><p>Filtered set of pages from the Wikipedia Project namespace (namespace 4). I would get all the pages from namespace 4 in each language edition, and then filter those pages by (a) how many ILLs they have, for example.</p>
+<ul class="list">
+<li>Pros: Can do with a script and fast + I already have this script and data (for top 10 langs) more or less.</li>
+<li>Cons: This might include non-rule-pages. I guess I could manually spot-check them with my already-created criteria. But I also still have to decide on a cut-off point; I want to avoid having <em>too</em> many rules to look for (see the note below).</li>
+</ul>
+</li>
+<li><p>Sohyeon&#39;s curated rule list, maybe filtered down more.</p>
+<ul class="list">
+<li>Pros: This includes, fairly confidently, things that are &#39;rules&#39; and the curating work is already done. I might still want to cut down what is in this set, especially if I expand to more language editions (e.g. perhaps remove things that are just stylistic aka from the manual of style). One nice thing is that this might include some interesting community-specific rules.</li>
+<li>Cons: This is a <em>very</em> time- and labor-intensive process, which I would rather not repeat.</li>
+</ul>
+</li>
+<li><p>A small curated set of 10-25 essential/core rules.</p>
+<ul class="list">
+<li>Pros: Faster to run wikiq for fewer regular expressions (see the note below). Also, maybe it just <em>isn&#39;t meaningful or interesting</em> to be tracking mentions of many of the rule pages in the Wikipedia Project namespace.</li>
+<li>Cons: Limited tracking of rules. What if I want community-specific rules? I guess I could include some anyhow?</li>
+</ul>
+</li>
+</ul>
+<p>An <strong>important note</strong> here is that when I run <code>wikiq</code> to look for instances of policy invocation through the regex feature we built into it, I could either: </p>
+<ul class="list">
+<li>Make one extremely large and disgusting regular expression to capture all of the rules/their shorthands in one go (what I call the &quot;<em>mega</em>&quot; version of the <code>wikiq</code> call), or </li>
+<li>Make one regular expression per rule and have a regex for each regular expression (this means there are multiple regular expressions I tell wikiq to look for, or the &quot;<em>wide</em>&quot; version of making the <code>wikiq</code> call). </li>
+</ul>
+<p>In 2019/2020, I had done some testing, and because the regex becomes so hopelessly gross, the <em>mega</em> version of making the <code>wikiq</code> call can be kind of buggy so I would rather not use it. However, the <em>wide</em> version of the <code>wikiq</code> call is quite slow (because it must look for many regular expressions separately). So there are trade-offs here to consider for determining which and how many rules to track.</p>
+<hr>
+<p>You can stop reading here or skim the following as well for more context on what I plan to do with WikiPI in the coming months.</p>
+<h2 id="potential-outputs"><a class="header-link" href="#potential-outputs"></a>Potential outputs</h2>
+<p>After I process this data in June 2022, there are a few manuscripts that I plan to churn out (and close the chapter on this WIKIPI journey for now).</p>
+<p><code>wikipi2.0</code>: Mapping variations in usage across language editions, to map patterns of <em>de facto</em> use of rules from their <em>de jure</em> forms. This one is the most confusing/unclear in form/shape/narrative. It may or may not include considering:</p>
+<ul class="list">
+<li>Basic descriptives of usage, such as over time and by how many + which users, etc.</li>
+<li>Where/when (e.g. what types of spaces/content on Wikipedia) do rules get used?</li>
+<li>Take a random sample and label the usage of the rules across language editions (maybe crowdsourced?)</li>
+<li>How much text variation surrounds the usage of the policy invocations across the language editions? I imagine some combination of meta characteristics about that revision + text mining might help capture variation. Another way might be deciding on a set of measurable features that are of relevance and doing a spider-web visualization of those features (or maybe range in use across certain dimensions), faceted by language editon, to show variation/difference (or maybe things will be strikingly the same).</li>
+</ul>
+<p>My strategy for this will be first generating a lot of exploratory data analysis/notebooks and then using these to refine a more interesting RQ to ask about organizational/institutional variation, maybe one to test or something, to frame a manuscript. </p>
+<p>If I do need to think about text mining more, I will probably reach out to someone who is more expert in that to ask if they would be interested in being a senior author / advisory role for developing a measure/analysis strategy to that end.</p>
+<p><code>wikipi3.0</code>: Test if certain rules are used in ways that indeed indicate inequitable application of rules on Wikipedia (e.g. to newcomers, across topic areas, etc). One direction to take this that I think is exciting is a possibility/suggestion raised by Nate (so strong kudos to him!), i.e. test how rules might facilitate for example <em>gender disparities</em> on Wikipedia.</p>
+<p><strong>misc</strong>: In the interim, I&#39;d like to also publish and release the dataset for public use, maybe submit it as a dataset paper somewhere. And of course, I would love for others in the group to use it as well.</p>
+<h3 id="venues"><a class="header-link" href="#venues"></a>Venues</h3>
+<table>
+<thead>
+<tr>
+<th>Iteration</th>
+<th>Venue</th>
+<th>Short description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>wikipi2.0</code></td>
+<td>TBD, but journal preferred</td>
+<td>Mapping variations in <em>de facto</em> use of broadly shared rules.<br/>I would like for this to be journal piece I think, but I guess it depends on how I decide to frame it + RQs after I do the exploratory data work...</td>
+</tr>
+<tr>
+<td><code>wikipi2.5</code></td>
+<td>ICA? a dataset track somewhere (ICWSM?)</td>
+<td>data descriptor paper, which would incorporate a lot of exploratory analyses as examples</td>
+</tr>
+<tr>
+<td><code>wikipi3.0</code></td>
+<td>General science journal (PNAS/Science/Nature Human Behavior?)</td>
+<td>Testing the use and role of rules in facilitating disparities/gaps on Wikipedia</td>
+</tr>
+</tbody></table>
+<h3 id="timeline"><a class="header-link" href="#timeline"></a>Timeline</h3>
+<p>For reference and perhaps, accountability :&#39; ) </p>
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Goals</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>06/2022</td>
+<td>Run Wikiq and have processed dataset + some basic documentation about the dataset pulled together</td>
+</tr>
+<tr>
+<td>07/2022</td>
+<td>Exploratory analyses + figures of data, including some basic descriptives of rule usage<br/>Refine the RQ(s) and create a detailed planning document for <code>wikipi2.0</code></td>
+</tr>
+<tr>
+<td>08/2022</td>
+<td>Work on pulling together <code>wikipi2.0</code> manuscript</td>
+</tr>
+<tr>
+<td>09/2022</td>
+<td><strong>Submit</strong> <code>wikipi2.0</code> manuscript (preferably journal) <br/> <em>ICWSM deadline</em></td>
+</tr>
+<tr>
+<td>10/2022</td>
+<td>Detailed planning document for <code>wikipi3.0</code> <br/> <em>WWW deadline</em></td>
+</tr>
+<tr>
+<td>11/2022</td>
+<td><strong>Submit</strong> <code>wikipi3.0</code> manuscript (preferably journal) <br/> <em>ICA deadline</em></td>
+</tr>
+<tr>
+<td>12/2022</td>
+<td>Retire WikiPI from my rotation of projects and make sure that detailed / fleshed out data + documentation avialable for people to use + reference. <br/>AKA sohyeon escapes WikiPI purgatory after 3 years of grad school.</td>
+</tr>
+</tbody></table>
+    </article>
+  </body>
+</html>

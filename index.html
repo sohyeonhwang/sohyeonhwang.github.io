@@ -50,7 +50,7 @@
         <li><b>2022/08 - </b>my recent work on Wikipedia rule-making got covered in the Wikipedia Signpost 📰 :D [<a href="https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2022-08-01/Recent_research"  target="_blank">link</a>]</li>
         <li><b>2022/07 - </b>work with <a href="https://www.agneshorvat.info/" target="_blank">Agnes Horvat</a> and <a href="htt[]://dromero.org/" target="_blank">Daniel Romero</a> as a full-length manuscript has been accepted for ICWSM2023! 📝 pre-print <a href="https://arxiv.org/abs/2207.13815" target="_blank">here</a> :3</li>
     </ul>
-    <p><a onclick="toggledisplay('morenews');" style="color:grey;border-bottom:none;"><b>+ older news</b><br/></a></p>
+    <p><a onkeydown="toggledisplayenter('morenews');" onclick="toggledisplay('morenews');" style="color:grey;border-bottom:none;" tabindex="0" role="button"><b>+ older news</b><br/></a></p>
     <div id="morenews" style="display:none;">
       <ul class="bulleted">
         <li><b>2022/06 - </b>was at <a target="_blank" href="https://icwsm.org/2022/index.html/">ICWSM2022</a> in Atlanta! thanks to the old roni, my first in-person conference in grad school</li>
@@ -91,7 +91,7 @@
             <li>happy dog-parent to <a href="https://www.instagram.com/tubachubflub/" target="_blank">tubby</a> and dog-sister to <a href="https://www.instagram.com/gold.nari/" target="_blank">nari</a> 💞</li>
         </ul>
     
-        <p><a onclick="toggledisplay('morebg');" style="color:grey;border-bottom:none;"><b>+ before-phd-life</b></a></p>
+        <p><a onkeydown="toggledisplayenter('morebg');" onclick="toggledisplay('morebg');" style="color:grey;border-bottom:none;" tabindex="0" role="button"><b>+ before-phd-life</b></a></p>
         <div id="morebg" style="display:none;">
         <p>I received my BA from Cornell University, where I double-majored in Government and Information Science. I focused on revolutions and ideology in the former and data science + ethics in the latter &mdash; a kind of weird mix that brought me to where I am now. As an undergrad, I was fortunate to work with a variety of folks: the <a href="https://wri.cals.cornell.edu/" target="_blank">NYSWRI</a>, the <a href="http://ccetompkins.org/energy/get-your-green-back-tompkins" target="_blank">Get Your Green Back Tompkins</a> campaign, and Dr. Victor Nee over at the <a href="http://www.economyandsociety.org/" target="_blank">Center for the Study of Economy and Society</a>. Between Cornell and Northwestern, I was an <a href="https://www.emmabowenfoundation.com/about_us" target="_blank">Emma Bowen Foundation Summer Fellow</a> at <a href="https://revealnews.org/" target="_blank">Reveal / Center for Investigative Reporting</a> on the Audience Team.</p>
         </div>
@@ -103,6 +103,13 @@
 <script>
 // script for toggling display of divs
 // from: https://stackoverflow.com/a/8454174/12893290
+function toggledisplayenter(elementID) {
+    if (event.keyCode == 13) {
+        (function(style) {
+            style.display = style.display === 'none' ? '' : 'none';
+        })(document.getElementById(elementID).style);
+    }
+}
 function toggledisplay(elementID) {
     (function(style) {
         style.display = style.display === 'none' ? '' : 'none';

@@ -1,0 +1,89 @@
+.header-faded-navilinks{
+    display:block;
+    background:rgba(255, 255, 255,0.6);
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left: 0;
+    text-indent: 0;
+    margin: 0 0 0 0;
+}
+
+
+.header-faded {
+    background:rgba(255, 255, 255,0.6);
+    position:fixed;
+    top:0;
+    width:100%;
+    text-align:left; 
+    margin: 0 0 0 0; 
+    padding: 8px 0px 8px 16px;
+}
+
+
+<div id="header">
+<ul class="w3-navbar w3-top w3-center navi-bar-top">
+    <li style="display:inline;" class="w3-hide-small"><a href="/">sohyeon hwang</a> : </li>
+    <li style="display:inline;" class="w3-hide-small"><a href="/research.html">research</a> / </li>
+    <li style="display:inline;" class="w3-hide-small"><a href="/archives.html">archives</a></li>
+
+    <button class="w3-button w3-hover-none w3-left w3-hide-large w3-hide-medium" style="padding-top: 0px;padding-bottom: 0px;"><a href="/">sohyeon hwang</a></button>
+    <button class="w3-button w3-hover-none w3-right w3-hide-large w3-hide-medium" style="padding-top: 0px;padding-bottom: 0px;"><a href="javascript:void(0)" onclick="naviChange()" style="border-bottom:0px;">&#9776;</a></button>
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-border-bottom w3-border-grey">
+      <a href="/research.html" class="header-faded-navilinks w3-button w3-center w3-hover-border-light-gray" style="margin-top:20px;">research</a>
+      <a href="/archives.html" class="header-faded-navilinks w3-button w3-center w3-hover-border-light-gray">archives</a>
+    </div>
+</ul>
+</div>
+
+
+<div class="center" id="submitted">
+    <div class="w3-container w3-mobile">
+    <p><b>under review + working papers</b></p>
+    <p><i>Most of these papers are under peer review, so I have made up new titles signaling the manuscript content to maintain the double-blind review process. Only papers with the broom emoji (🧹) are working papers that are not under review yet.</i></p>
+    <ul class="bulleted">
+        <li><b>Hwang, Sohyeon</b>, Serene Ong, and Charles Kiene. "Bot stacks: curating sets of third-party bots as management suites for online communities".</li>
+        <li>Huang, Evey, Abraneel Sarma, <b>Sohyeon Hwang</b>, Stevie Chancellor, and Eshwar Chandrasekharan. "New opportunities in computational approaches to addressing the heterogeneity of online harm".</li>
+        <li><b>Hwang, Sohyeon</b> and Aaron Shaw. "Mapping de facto patterns of rules across online community organizations".</li>
+        <li>🧹<b>Hwang, Sohyeon</b>. "Locating accountability in online community governance".</li>
+    </ul>
+    </div>
+    </div>
+
+
+    <p><a onclick="toggledisplay('currentprojects');" style="color:grey;border-bottom:none;"><b>+ current project overview</b></a></p>
+    <div id="currentprojects" style="display:none;">
+    <i>last updated 02/2022</i>
+    <ul class="bulleted">
+        <li><b>heterogeneous governance</b>,<br/>studying variation in governance development and enforcement across communities on platforms like Wikipedia and Reddit. some of this work is supported by NSF grant <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1910202&HistoricalAwards=false" target="_blank">IIS-1910202</a>.</li>
+        <li><b>scale + distort</b>,<br/>studying how scales affect information, content, and interactions e.g., information retention, the role of smallness, etc.</li>
+        <li><b>cdsc covid-19 digital observatory</b>,<br/>I help maintain some data collection of covid19 mentions in online spaces and search engines with my research group.</li>
+    </ul>
+    </div>
+
+
+
+
+    <span id="pubs"></span>
+    <div class="center" id="pubs" style="margin-top:25px;">
+    <div class="w3-container w3-mobile">
+    <p><b>academic publications</b></p>
+    <p>🏵️ = award</p>
+    <i>peer-reviewed, archival work</i>
+    <ul class="bulleted">
+        <li><b>Hwang, Sohyeon</b>, Emőke-Ágnes Horvát, and Daniel Romero. (2023, Forthcoming). Information retention in the multi-platform sharing of science. [<a href="https://arxiv.org/abs/2207.13815" target="_blank">pre-print</a>]</li>
+        <li><b>Hwang, Sohyeon</b> and Aaron Shaw. (2022). Rules and rule-making in the five largest Wikipedias. In Proc. 16th International AAAI Conference on Web and Social Media (ICWSM). Atlanta, Georgia. [<a href="https://ojs.aaai.org/index.php/ICWSM/article/view/19297" target="_blank">link</a>]</li>
+        <li>🏵️ <b>Hwang, Sohyeon</b>, and Jeremy Foote. (2021). Why do people participate in small online communities? <i>Proc. ACM Hum.-Comput. Interact.</i> 5, CSCW2, Article 462 (October 2021), 25 pages. [<a href="https://doi.org/10.1145/3479606" target="_blank">doi</a> (open-access)]</li> 
+    </ul>
+
+    <i>posters, presentations, and talks (peer-reviewed, non-archival)</i>
+    <ul class="bulleted">
+        <li><b>Hwang, Sohyeon</b>, Emőke-Ágnes Horvát, and Daniel Romero. (2022, multiple venues). Information retention in multi-platform discussions of science. [<a href="/docs/IC2S2_2022_poster.pdf">pdf</a>]</li>
+            <ul class="arrow">
+                <li>Poster presentation @ International Conference on Computational Social Science (IC2S2) 2022, 19-22 July 2022. Chicago, IL.</li>
+                <li>Poster presentation @ International Conference on the Science of Science and Innovation (ICSSI) 2022. June 7-9, 2022. Washington DC, USA.</li>
+            </ul>
+        <li><b>Hwang, Sohyeon</b> and Aaron Shaw. (2020). Heterogeneous practices in collective governance. Collective Intelligence 2020 (CI 2020). Boston & Copenhagen (Virtually held). [<a href="/docs/WikiPI_CI2020_02292020_1.pdf">pdf</a>] [<a href="https://youtu.be/5n4po2niXPM" target="_blank">recording</a>] </li>
+        <li>Rahm, Brian G., <b>Sohyeon Hwang</b>, Tim Joo, Karin Teuffer, Sridhar Vedachalam, Deb Grantham, and Susan J. Riha. (2016). Making the case for OWTS management: lessons from case studies and research. In AGU Fall Meeting 2016 Abstracts. San Francisco, CA. [<a href="/docs/AGU2016.pdf">pdf</a>]</li>
+    </ul>
+    </div>
+    </div>

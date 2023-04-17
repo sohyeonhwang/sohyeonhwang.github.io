@@ -12,8 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="shortcut icon" href="imgs/favicon.png">
-
+    <link rel="icon" href="imgs/favicon.png">
 </head>
 
 <body>
@@ -33,7 +32,7 @@
     </div>
   </div>
 
-  <div style="border-left:1px solid gray;height:250px;position: relative;left:50%;margin-left:0.5px;top:25px;"></div>
+  <div style="border-left:1px solid gray;width:50%;height:250px;position: relative;left:50%;margin-left:0.5px;top:25px;"></div>
 
   <div class="borderless-section">
     <!---teaching--->
@@ -118,45 +117,31 @@
 
   </div>
 
-
-
-<script>
-// script for toggling display of divs
-// from: https://stackoverflow.com/a/8454174/12893290
-function toggledisplayenter(elementID) {
-    if (event.keyCode == 13) {
+  <script>
+    // script for toggling display of divs
+    // from: https://stackoverflow.com/a/8454174/12893290
+    function toggledisplayenter(elementID) {
+        if (event.keyCode == 13) {
+            (function(style) {
+                style.display = style.display === 'none' ? '' : 'none';
+            })(document.getElementById(elementID).style);
+        }
+    }
+    function toggledisplay(elementID) {
         (function(style) {
             style.display = style.display === 'none' ? '' : 'none';
         })(document.getElementById(elementID).style);
     }
-}
-function toggledisplay(elementID) {
-    (function(style) {
-        style.display = style.display === 'none' ? '' : 'none';
-    })(document.getElementById(elementID).style);
-}
-
-function naviChangeEnter() {
-  if (event.keyCode == 13) {
-    var x = document.getElementById("demo");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else { 
-      x.className = x.className.replace(" w3-show", "");
+    
+    function naviChange() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
     }
-  }
-}
-
-function naviChange() {
-  var x = document.getElementById("demo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
 </script>
-
 
 </body>
 </html>

@@ -1,2 +1,2 @@
 # sohyeonhwang.github.io
-Website of Sohyeon Hwang, PhD student in Media, Technology, and Society at Northwestern University
+Website of Sohyeon Hwang, postdoctoral fellow at the Center for Information Technology Policy at Princeton University.

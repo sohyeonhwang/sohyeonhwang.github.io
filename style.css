@@ -44,6 +44,11 @@ div.expandable {
     margin-bottom: 10px;
 }
 
+mark {
+    background-color: #001aff;
+    color:#D8D8D8;
+}
+
 /* links */
 a {
     background-color: transparent;
@@ -96,6 +101,8 @@ a:hover {
 }
 
 /* local settings */
+
+
 .w3-cell{
     width: 600px;
 }
